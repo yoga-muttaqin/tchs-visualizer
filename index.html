@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="build.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
       rel="stylesheet"
       type="text/css"
     />
-    <title>TCHS JSON Visualizer</title>
+    <link rel="stylesheet" href="custom.css" />
+    <title>TCHS VIEWER</title>
     <style>
       .active-tab {
         color: #facc15;
@@ -19,6 +20,48 @@
       }
       .not-active-tab:hover {
         color: #facc15;
+      }
+      .relationship .outline {
+        outline-style: none !important;
+      }
+
+      .node .outline {
+        outline-style: none !important;
+      }
+
+      .d3-context-menu {
+        position: absolute;
+        display: none;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        min-width: 150px;
+        border: 1px solid #d4d4d4;
+
+        z-index: 1200;
+      }
+
+      .d3-context-menu ul {
+        list-style-type: none;
+        margin: 4px 0px;
+        padding: 0px;
+        cursor: pointer;
+      }
+
+      .d3-context-menu ul li {
+        padding: 4px 16px;
+      }
+
+      .d3-context-menu ul li ul li:hover {
+        background-color: #4677f8;
+        color: #fefefe;
+        cursor: default;
+      }
+
+      .d3-context-menu .relation:hover {
+        cursor: pointer;
       }
     </style>
   </head>
@@ -30,6 +73,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="utility.js"></script>
-    <script type="module" src="main.js"></script>
+    <script src="d3.min.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
