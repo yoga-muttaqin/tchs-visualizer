@@ -57,19 +57,6 @@
   cursor: move;
 }
 
-.active-tab {
-  color: #0d9488;
-}
-
-.not-active-tab {
-  color: #9ca3af;
-}
-
-.not-active-tab:hover {
-  color: #e5e7eb;
-  background-color: #374151;
-}
-
 .relationship .outline {
   outline-style: none !important;
 }
